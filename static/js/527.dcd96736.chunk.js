@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvsb_fei_ssz=self.webpackChunkvsb_fei_ssz||[]).push([[527],{527:function(s,e,c){s.exports=c.p+"static/media/3.6a1cb04c22466b55dcbe.md"}}]);

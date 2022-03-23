@@ -1,1 +1,0 @@
-# Zpracované otázky k SZZ
