@@ -1,8 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import Markdown from 'markdown-to-jsx';
+import ReactMarkdown from 'react-markdown'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import remarkGfm from 'remark-gfm'
 import TopMenu from './TopMenu';
 import SideMenu from './SideMenu';
+import 'katex/dist/katex.min.css'
 
 
 function App() {
@@ -30,9 +34,10 @@ function App() {
 
             <SideMenu section={section} subSection={subSection} setNumber={setNumber} />
             <div className="col-9">
-                <Markdown>
-                    {post}
-                </Markdown>
+                <ReactMarkdown
+                    children={post}
+                    remarkPlugins={[remarkGfm,remarkMath]}
+                    rehypePlugins={[rehypeKatex]}/>
             </div>
             </div>
         </main>
