@@ -12,7 +12,7 @@ import 'katex/dist/katex.min.css'
 function App() {
     const [section, setSection] = useState("optional")
     const [subSection, setSubsection] = useState("data_analysis")
-    const [number, setNumber] = useState('1')
+    const [number, setNumber] = useState('01')
 
     const [post, setPost] = useState('');
 
