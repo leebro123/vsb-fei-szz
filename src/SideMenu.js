@@ -9,6 +9,7 @@ const SideMenu = ({section, subSection, setNumber}) => (
         >
             {titles[section][subSection].map((t, i) => (
                 <a
+                    key={i}
                     className="nav-link border-bottom border-right"
                     role="tab"
                     onClick={() => setNumber((i + 1).toLocaleString(undefined, {

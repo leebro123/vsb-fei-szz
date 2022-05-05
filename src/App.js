@@ -27,6 +27,20 @@ function App() {
             .catch(err => console.log(err));
     });
 
+    const components = {
+        img: ({
+            alt,
+            src,
+            title,
+        }) => (
+            <img 
+                alt={alt} 
+                src={process.env.PUBLIC_URL + src} 
+                title={title} 
+                style={{}}  />
+        ),
+    };
+
     return (
         <main>
             <TopMenu setSection={setSection} setSubsection={setSubsection}/>
@@ -35,9 +49,11 @@ function App() {
             <SideMenu section={section} subSection={subSection} setNumber={setNumber} />
             <div className="col-9">
                 <ReactMarkdown
+                    escapeHtml={false}
                     children={post}
                     remarkPlugins={[remarkGfm,remarkMath]}
-                    rehypePlugins={[rehypeKatex]}/>
+                    rehypePlugins={[rehypeKatex]}
+                    components={components}/>
             </div>
             </div>
         </main>
