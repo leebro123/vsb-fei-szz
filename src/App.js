@@ -35,7 +35,7 @@ function App() {
         }) => (
             <img 
                 alt={alt} 
-                src={process.env.PUBLIC_URL + src} 
+                src={src.startsWith('http') ? src : process.env.PUBLIC_URL + src}
                 title={title} 
                 style={{}}  />
         ),
